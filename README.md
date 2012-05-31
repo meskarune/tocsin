@@ -1,4 +1,7 @@
 tocsin
 ======
 
-tocsin: a program that chimes the quarters and hours
+tocsin: a sound clock that chimes the quarters and hours
+
+Planned themes: westminister quarters 
+                wind chimes
