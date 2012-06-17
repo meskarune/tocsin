@@ -3,9 +3,10 @@ tocsin
 
 tocsin: a sound clock that chimes the quarters and hours
 
-###Planned themes:
->westminister quarters 
->wind chimes
+###Available themes:
+>westminister quarters
+
+###How Tocsin works:
 
 In one hour, the quarters and hours will be chimed with a total of 5 
 chimes per hour. 
@@ -23,7 +24,8 @@ user run this in a terminal:
 
 	crontab -e
 	
-Then add a cron job to that file. Here is a cheat sheet for cron jobs:
+Then add a cron job to that file. Here is a cheat sheet for cron job 
+syntax:
 
 	* * * * * command to be executed
 	- - - - -
@@ -50,4 +52,9 @@ only on weekdays:
 
 If you only want the hours to chime do:
 
-	@hourly /path/to/tocsin 
+	@hourly /path/to/tocsin
+	
+###Contact
+
+Email: admin@doloresportalatin.info
+IRC: meskarune @ irc.freenode.net
