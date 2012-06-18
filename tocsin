@@ -2,5 +2,34 @@
 #
 #Tocsin - Plays a Chime at the Hour and Quarter Hour
 
-chime=( ./chimes/{"$(date +%I)"-hour,quarter{1..3}}.mp3 )
-(( ( min=$(date +%M) ) % 15 )) || mpg123 "${chime[min/15]}"
+# Quarter Chime Variables
+
+fifteen="/home/meskarune/GIT/tocsin/chimes/quarter1.mp3"
+thirty="/home/meskarune/GIT/tocsin/chimes/quarter2.mp3"
+fortyfive="/home/meskarune/GIT/tocsin/chimes/quarter3.mp3"
+
+# Hour Variable
+
+hour=`date +%I`
+
+# Hour Chime Variable
+
+hourchime="/home/meskarune/GIT/tocsin/chimes/$hour-hour.mp3"
+
+# Chime the Hour when minutes = 00 and Quarter Hours on the 15, 30, 
+# and 45 minute marks.
+
+case "$(date +%M)" in
+	00) 
+		mpg123 -q $hourchime
+		;;
+	15) 
+		mpg123 -q $fifteen
+		;;
+	30)
+		mpg123 -q $thirty
+		;;
+	45)
+		mpg123 -q $fortyfive
+		;;
+esac
