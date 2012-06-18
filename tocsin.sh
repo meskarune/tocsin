@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 #
 #Tocsin - Plays a Chime at the Hour and Quarter Hour
 
@@ -21,15 +21,15 @@ hourchime="./chimes/$hour-hour.mp3"
 
 case "$(date +%M)" in
 	00) 
-		mpg123 $hourchime | head -n $1
+		mpg123 $hourchime
 		;;
 	15) 
-		mpg123 $fifteen | head -n $1
+		mpg123 $fifteen
 		;;
 	30)
-		mpg123 $thirty | head -n $1
+		mpg123 $thirty
 		;;
 	45)
-		mpg123 $fortyfive | head -n $1
+		mpg123 $fortyfive
 		;;
 esac
