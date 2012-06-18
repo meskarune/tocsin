@@ -1,8 +1,11 @@
 #! /bin/bash
 #
 #Tocsin - Plays a Chime at the Hour and Quarter Hour
+#
+# You can change the paths to any sound files you'd like, but paths must be absolute for cron to work
+# This script uses mpg123 to play the mp3 chime files. Alternative programs would be aplay, ogg123, and madplay.
 
-# Quarter Chime Variables
+#Quarter Chime Variables
 
 fifteen="/home/meskarune/GIT/tocsin/chimes/quarter1.mp3"
 thirty="/home/meskarune/GIT/tocsin/chimes/quarter2.mp3"
