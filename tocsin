@@ -1,0 +1,6 @@
+#! /bin/bash
+#
+#Tocsin - Plays a Chime at the Hour and Quarter Hour
+
+chime=( ./chimes/{"$(date +%I)"-hour,quarter{1..3}}.mp3 )
+(( ( min=$(date +%M) ) % 15 )) || mpg123 "${chime[min/15]}"
