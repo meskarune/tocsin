@@ -13,7 +13,7 @@ fortyfive="/home/meskarune/GIT/tocsin/chimes/quarter3.mp3"
 
 # Hour Variable
 
-hour=`date +%I`
+hour=$(date "+%I")
 
 # Hour Chime Variable
 
