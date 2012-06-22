@@ -3,7 +3,7 @@
 #Tocsin - Plays a Chime at the Hour and Quarter Hour
 #
 # You can change the paths to any sound files you'd like, but paths must be absolute for cron to work
-# This script uses mpg123 to play the mp3 chime files. Alternative programs would be aplay, ogg123, and madplay.
+# This script uses mplayer to play the mp3 chime files. Alternative programs would be mpg123, aplay, ogg123, and madplay.
 
 #Quarter Chime Variables
 
@@ -20,19 +20,19 @@ hour=$(date "+%I")
 hourchime="/home/meskarune/GIT/tocsin/chimes/$hour-hour.mp3"
 
 # Chime the Hour when minutes = 00 and Quarter Hours on the 15, 30, 
-# and 45 minute marks.
+# and 45 minute marks. Set the playback volume to the low end so sound doesn't disrupt other media.
 
 case "$(date +%M)" in
 	00) 
-		mpg123 -q $hourchime
+		mplayer -softvol -volume 10 $hourchime
 		;;
 	15) 
-		mpg123 -q $fifteen
+		mplayer -softvol -volume 10 $fifteen
 		;;
 	30)
-		mpg123 -q $thirty
+		mplayer -softvol -volume 10 $thirty
 		;;
 	45)
-		mpg123 -q $fortyfive
+		mplayer -softvol -volume 10 $fortyfive
 		;;
 esac
