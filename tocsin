@@ -7,9 +7,9 @@
 
 #Quarter Chime Variables
 
-fifteen="/home/meskarune/GIT/tocsin/chimes/quarter1.mp3"
-thirty="/home/meskarune/GIT/tocsin/chimes/quarter2.mp3"
-fortyfive="/home/meskarune/GIT/tocsin/chimes/quarter3.mp3"
+fifteen="$HOME/tocsin/chimes/quarter1.mp3"
+thirty="$HOME/tocsin/chimes/quarter2.mp3"
+fortyfive="$HOME/tocsin/chimes/quarter3.mp3"
 
 # Hour Variable
 
@@ -17,7 +17,7 @@ hour=$(date "+%I")
 
 # Hour Chime Variable
 
-hourchime="/home/meskarune/GIT/tocsin/chimes/$hour-hour.mp3"
+hourchime="$HOME/tocsin/chimes/$hour-hour.mp3"
 
 # Chime the Hour when minutes = 00 and Quarter Hours on the 15, 30, 
 # and 45 minute marks. Set the playback volume to the low end so sound doesn't disrupt other media.
