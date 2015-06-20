@@ -1,0 +1,6 @@
+[Unit]
+Description=Plays a chime on the quarter hour
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tocsin

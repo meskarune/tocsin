@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Tocsin every 15 minutes
+
+[Timer]
+OnCalendar=*:0,15,30,45
+Persistent=true
+
+[Install]
+WantedBy=timers.target
